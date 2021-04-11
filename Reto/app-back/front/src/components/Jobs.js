@@ -1,5 +1,6 @@
 import React,{useEffect,useState} from 'react';
 import Job from './Job';
+import JobForm from './JobForm';
 
 const JobList=()=>{
     const [state, setState] = useState({offers: []});
@@ -38,6 +39,7 @@ const JobList=()=>{
                     <h2>
                         Create a Job Offer
                     </h2>
+                    <JobForm></JobForm>
                 </section>
             </main>
             

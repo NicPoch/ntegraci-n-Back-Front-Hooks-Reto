@@ -10,5 +10,11 @@ router.get('/',(req,res,next)=>{
         });
     });
 });
-
+//POST
+router.post('/',(req,res,next)=>{
+    Mongolib.getdatabase(db=>{
+        Mongolib.insertDocument(db,req.body);
+        res.sendStatus(200);
+    });
+});
 module.exports=router;

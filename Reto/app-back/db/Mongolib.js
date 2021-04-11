@@ -22,5 +22,10 @@ const findDocuments=(db,callback)=>{
     });
 };
 
+const insertDocument=(db,document)=>{
+    db.collection('offers').insertOne(document);
+};
+
 exports.getdatabase=getdatabase;
 exports.findDocuments=findDocuments;
+exports.insertDocument=insertDocument;
